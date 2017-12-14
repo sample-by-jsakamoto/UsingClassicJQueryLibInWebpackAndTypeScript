@@ -81,6 +81,7 @@ var $ = __webpack_require__(2);
 $(function () {
     var randomNum = Math.round(100 * Math.random());
     $('#p1').text(randomNum);
+    $('#p2').fizzbuzz(randomNum);
 });
 
 

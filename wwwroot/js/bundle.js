@@ -78,6 +78,7 @@ module.exports = __webpack_require__(1);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var $ = __webpack_require__(2);
+__webpack_require__(3);
 $(function () {
     var randomNum = Math.round(100 * Math.random());
     $('#p1').text(randomNum);
@@ -10343,6 +10344,21 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+(function ($) {
+    $.fn.fizzbuzz = function (n) {
+        var text =
+            (n % 3 == 0 && n % 5 == 0) ? 'fizz-buzz' :
+                (n % 3 == 0) ? 'fizz' :
+                    (n % 5 == 0) ? 'buzz' : n;
+        $(this).text(text);
+        return this;
+    }
+})(jQuery)
 
 /***/ })
 /******/ ]);
